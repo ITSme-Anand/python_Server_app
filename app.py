@@ -18,11 +18,8 @@ def tell_the_whether():
         data = response.json()
         temp = data['main']['temp']
         desc = data['weather'][0]['description']
-        print(f'Temperature: {temp} K')
-        print(f'Description: {desc}')
         return f'temperature:{temp} and description:{desc}'
     else:
-        print('Error fetching weather data')
         return 'error'
     
 
